@@ -1,0 +1,29 @@
+# the current home for this version is https://github.com/EduardoMDSousa 
+# https://discord.gg/JxUjzxK9
+# EduardoSousa#7556 at Discord 
+#Macros 
+ 
+[gcode_macro start_probe_accuracy]
+variable_bed_temp: 0
+gcode:
+  G28 X Y 
+  Attach_Probe_Lock
+  G28 z
+  G0 F5000 X150 Y150 # edit to your setings
+  PROBE_ACCURACY
+  Dock_Probe_Unlock
+  #finish_probe
+  
+[gcode_macro start_probe_calibrate]   
+gcode:
+    {% set BED_TEMP = params.BED_TEMP|default(70)|float %}
+    {% set EXTRUDER_TEMP = params.EXTRUDER_TEMP|default(235)|float %}
+    M190 S{BED_TEMP}
+    M109 S{EXTRUDER_TEMP}
+  G28 X Y 
+  Attach_Probe_Lock
+  G28 z
+  G0 F5000 X150 Y150 # edit to your setings
+  PROBE_CALIBRATE
+  Dock_Probe_Unlock
+  #finish_probe

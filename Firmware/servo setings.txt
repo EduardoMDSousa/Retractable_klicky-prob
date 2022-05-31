@@ -1,0 +1,26 @@
+# the current home for this version is https://github.com/EduardoMDSousa 
+# https://discord.gg/JxUjzxK9
+# EduardoSousa#7556 at Discord 
+# servo setings for print config file
+
+[servo probe_dock_servo]
+pin: P2.0            # P2.0 is for Skr 1.4, use the appropriate pin for your MCU
+#   PWM output pin controlling the servo. This parameter must be
+#   provided.
+maximum_servo_angle: 180
+#   The maximum angle (in degrees) that this servo can be set to. The
+#   default is 180 degrees.
+minimum_pulse_width: 0.0005
+#   The minimum pulse width time (in seconds). This should correspond
+#   with an angle of 0 degrees. The default is 0.001 seconds.
+maximum_pulse_width: 0.0025
+#   The maximum pulse width time (in seconds). This should correspond
+#   with an angle of maximum_servo_angle. The default is 0.002
+#   seconds.
+initial_angle: 150  # to edit for your case
+#   Initial angle (in degrees) to set the servo to. The default is to
+#   not send any signal at startup.
+#initial_pulse_width:
+#   Initial pulse width time (in seconds) to set the servo to. (This
+#   is only valid if initial_angle is not set.) The default is to not
+#   send any signal at startup.
