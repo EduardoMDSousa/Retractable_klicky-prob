@@ -1,6 +1,14 @@
 # Retractable_klicky-prob
 reatactable klicky prob dock, for VZbot and other printer 
 
+The inspiration for this project comes from the Klicky prob project.
+With the help of JosAr
+
+https://github.com/jlas1/Klicky-Probe
+
+3DP + ME
+https://discord.gg/N52sGPjb
+
 under construction 
 _________________________________________________________
 General Bill of Materials (BOM)
